@@ -90,12 +90,29 @@ export default ({columns, data, selections, setSelections, handleClick}) => {
                     return (
                         <tr key={idx}>
                             <td>
-                                <div className="ant-table-selection">
+                                <div
+                                    onClick={() => {
+                                        console.log(item.dataKey);
+                                        if (selections.hasOwnProperty(item.dataKey)) {
+                                            const filterSelections = Object.values(selections).filter(filterItem => parseInt(filterItem.dataKey) !== parseInt(item.dataKey))
+                                            let tempSelection = {};
+
+                                            filterSelections.map(selectionItem => {
+                                                tempSelection[selectionItem.dataKey] = selectionItem
+                                            })
+                                            
+                                            setSelections(tempSelection);
+
+                                        } else {
+                                            setSelections({
+                                                ...selections,
+                                                [item.dataKey]: item
+                                            })
+                                        }
+
+                                    }}
+                                    className="ant-table-selection">
                                     <label
-                                        onClick={() => setSelections({
-                                            ...selections,
-                                            [item.dataKey]: item
-                                        })}
                                         className="ant-checkbox-wrapper ant-checkbox-wrapper-checked">
                                     <span
                                         className={`ant-checkbox ${selections?.hasOwnProperty(item.dataKey) ? 'ant-checkbox-checked' : ''}`}>

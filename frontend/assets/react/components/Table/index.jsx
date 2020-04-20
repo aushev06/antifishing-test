@@ -100,7 +100,7 @@ export default ({columns, data, selections, setSelections, handleClick}) => {
                                             filterSelections.map(selectionItem => {
                                                 tempSelection[selectionItem.dataKey] = selectionItem
                                             })
-                                            
+
                                             setSelections(tempSelection);
 
                                         } else {

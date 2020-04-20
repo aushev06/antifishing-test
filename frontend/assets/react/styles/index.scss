@@ -1,0 +1,69 @@
+@import "~reset-css";
+@import "~antd/dist/antd.css";
+
+body {
+  background-color: #f4f7fd;
+}
+
+body,
+html,
+#root,
+.wrapper {
+  height: 100%;
+  color: #202020;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+  "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+}
+
+* {
+  outline: none;
+}
+
+.ant-btn-circle {
+  border: 0;
+  box-shadow: none;
+  color: #202020 !important;
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.site-layout-content {
+  background: #fff;
+  padding: 24px;
+  min-height: 280px;
+  width: 100% !important;
+}
+
+#components-layout-demo-top .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.ant-layout-content {
+  margin-top: 10px;
+  padding: 0 50px !important;
+
+}
+
+.site-form-in-drawer-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 16px;
+  border-top: 1px solid #e9e9e9;
+  background: #fff;
+  text-align: right;
+}
